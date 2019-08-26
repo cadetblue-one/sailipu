@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			[class^="big"]{
+				width: 100%;
+			}
+			button{
+				background: #1b6d85!important;
+				border: none;
+				padding: 4px 12px; 
+				border-radius: 6px;
+			}
+			.container{
+				width: 80%;
+			}
+			
+			
+			/*header*/
+			/*logo*/
+			.logo {
+				margin-top: -15px;
+				background: -webkit-linear-gradient(#1d2154,#2f6eae);
+			}
+			.logo span{
+				display: block;
+			}
+			.logo1{
+				background: white;
+				padding: 20px;
+				border-bottom-right-radius: 40px;
+			}
+			.logo2{
+				color: white;
+				height: 40px;
+				line-height: 40px;
+				padding-left: 10px;
+			}
+			.logo3{
+				color: white;
+				height: 0px;
+				overflow: hidden;
+				line-height: 40px;
+				padding-left: 10px;
+				background: dodgerblue;
+				transition: all .5s linear;
+			}
+			.logo:hover .logo3{
+				height: 40px;
+			}
+			.big-header{
+				background: #f8f8f8;
+			}
+			.navbar-default{
+				border: none;
+				margin-bottom: 0;
+			}
+			.header img{
+				height: 24px;
+			}
+			.navbar-nav > li > a {
+				text-align: left;
+			}
+			#men ul>li>ul{
+				padding: 0;
+			}
+			#men ul>li>ul>li{
+				border-bottom: 1px solid #ccc;
+				padding: 4px 0;
+				color: #666;
+			}
+			/*binner*/
+			.big-binner{
+				background: url(img/ultrasound-l.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.text{
+				padding: 10% 0 10% 20%;
+			}
+			
+			/*企业动态*/
+			.small-tubiao{
+				overflow: hidden;
+				border-bottom: 1px solid #ccc;
+			}
+			.small-tubiao p{
+				float: left;
+			}
+			.small-tubiao ul li{
+				list-style: none;
+				display: inline-block;
+				float: right;
+			}
+			.center img{
+				width: 50%;
+				margin: 10px 0;
+			}
+			.bottom button{
+				background: #15a9d4!important;
+				border-radius: 0;
+			}
+			.bottom button a{
+				color: white;
+			}
+			
+			/*消费类产品*/
+		.big-xiaofei{
+			background: #122b40;
+		}
+		.big-xiaofei li{
+			list-style: none;
+		}
+		.big-xiaofei ul li:first-child{
+			font-size: 26px;
+			padding: 10px 0;
+		}
+		.big-xiaofei ul li a{
+			color: white;
+		}
+		
+		/*footer*/
+		.rowa div{
+			padding-top: 30px;
+		}
+		.big-footer{
+			background: -webkit-linear-gradient(#025581,#0169e6);
+		}
+		.a a{
+			display: inline-block;
+			font-size: 22px;
+		}
+		.a img{
+			width: 10%;
+		}
+		.c select{
+			padding: 13px 8px;
+			border-radius: 10px;
+		}
+		
+		/*footer*/
+		.row2{
+			padding-top: 100px;
+		}
+		.row2 ul li{
+			list-style: none;
+			display: inline-block;
+		}
+		.row2 ul li a{
+			color: white;
+			border-right: 1px solid white;
+			padding:0 10px 0 2px;
+		}
+		.row2 p{
+			color: white;
+		}
+		@media screen and (max-width:980px ) {
+			.container{
+				width: 100%;
+				margin: 0;
+			}
+			.input{
+				width: 100%;
+			}
+		}
+			/*右侧nav*/
+			.fix{
+				padding-left: 50px;
+				position: fixed;
+				right: 0;
+				top: 40%;
+				overflow: hidden;
+			}
+			.fix p{
+				background: #15A9D4;
+				width: 20px;
+				padding: 2PX;
+				float: left;
+				margin-top: 58PX;
+			}
+			.fix:hover ul{
+				margin-right: 0;
+			}
+			.fix ul{
+				margin-right: -50px;
+				float: left;
+			}
+			.fix ul li{
+				list-style: none;
+			}
+			.fix img{
+				width: 50PX;
+			}
+			.weixin{
+				position: relative;
+			}
+			.weixin:hover .erweima{
+				display: block;
+			}
+			.erweima{
+				height: 70px;
+				width: 70px!important;
+				display: none;
+				position: absolute;
+				right: 50px;
+				top: 10px;
+			}
+			
+			@media screen and (max-width:800px ) {
+				.text{
+					padding: 6% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big-header">
+		<div class="container">
+		<div class="row header">
+		<nav class="navbar navbar-default col-sm-12">
+		<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle = "collapse" data-target="#men"> 
+			<span class="sr-only"></span>	
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<span class="hidden-lg hidden-md " style="line-height: 40px;"> <img src="img/Philips_brand_logo_all_BR.png"/></span>
+			<span class="navbar-brand hidden-xs hidden-sm ">
+				<div class="logo">
+					<span class="logo1"><img src="img/Philips_brand_logo_all_BR.png"/></span>
+					<span class="logo2">消费产品</span>
+					<span class="logo3">产品</span>
+				</div>
+			</span>
+		</div>
+		<div class="collapse navbar-collapse" id="men">
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a href="#" class="btn" data-toggle="dropdown">产品<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="">视听产品</a></li>
+						<li><a href="">个人护理</a></li>
+						<li><a href="">母婴护理</a></li>
+						<li><a href="">厨房及家居</a></li>
+						<li><a href="">照明</a></li>
+						<li><a href="">健康</a></li>
+						<li><a href="">汽车</a></li>
+						<li><a href="">电脑产品、显示器，电话</a></li>
+						<li><a href="">附件</a></li>
+					</ul>
+				</li>
+				<li><a href="#">在线商城</a></li>
+				<li><a href="#">菲利普新闻</a></li>
+				<li class="dropdown "><a href="#" class="btn" data-toggle="dropdown" >产品支持 <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">支持主页</a></li>
+					    <li><a href="#">查找商品</a></li>
+					    <li><a href="#">查找客服中心</a></li>
+					    <li><a href="#">联系我们</a></li>
+					    <li><a href="#">购买附件</a></li>
+					</ul>
+				</li>
+				<li><a href="#">特惠专区</a></li>
+				<li><a href="#">塞利普俱乐部</a></li>
+				<li class="dropdown"><a href="#" class="btn" data-toggle="dropdown">关于塞利普<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="">公司概况</a></li>
+						<li><a href="">设计</a></li>
+						<li><a href="">研发</a></li>
+						<li><a href="">可持续发展</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+		</nav>
+		</div>
+		
+			</div>
+		</div>
+		
+		<!--binner-->
+		<div class="big-binner">
+			<div class="text">
+				<h1>新闻资讯</h1>
+				<h3>塞利普最新动态</h3>
+			</div>
+		</div>
+		
+		<!--企业动态-->
+		<div class="container">
+			<div class="row">
+				<p>企业动态/New Inforemnation</p>
+			</div>
+			<div class="row text-center">
+				<h5>塞利普官方网站上线了</h5>
+			</div>
+			<div class="row small-tubiao">
+				<p>编辑：小编大部时间2019/01/23</p>
+				<ul class="text-right">
+					<li><img src="img/QQ截图20181203174117.png" title="分享到佳佳"/ ></li>
+					<li><img src="img/QQ截图20181203174130.png" title="分享到QQ空间"/></li>
+					<li><img src="img/QQ截图20181203174140.png" title="分享到微博"/></li>
+					<li><img src="img/QQ截图20181203174150.png" title="分享到朋友圈"/></li>
+					<li><img src="img/QQ截图20181203174200.png" title="分享到人人网"/></li>
+					<li><img src="img/QQ截图20181203174213.png" title="分享到朋友圈"/></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--img-->
+		<div class="container">
+			<div class="row center text-center">
+				<img src="img/LM-MyPhilips-Banner.jpg"/>
+			</div>
+			<div class="row bottom">
+				<p>2017年5月29日，塞利普官方网站上线了</p>
+				<p>上一篇：<a href="#">已是第一篇</a></p>
+				<p>下一篇：<a href="#">塞利普十周年庆典圆满成功！</a></p>
+				<button><a href="index.html">⬅返回列表首页</a></button>
+			</div>
+		</div>
+		
+		<!--消费类产品-->
+		<div class="big-xiaofei">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<ul>
+							<li><a href="#">消费类产品</a></li>
+							<li><a href="#">产品</a></li>
+							<li><a href="#">在线商城</a></li>
+							<li><a href="#">产品支持</a></li>
+							<li><a href="#">特惠专区</a></li>
+							<li><a href="#">活动快递</a></li>
+							<li><a href="#">塞利普俱乐部</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><a href="#">专业产品</a></li>
+							<li><a href="#">医疗科技</a></li>
+							<li><a href="#">照明</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><a href="#">关于塞利普</a></li>
+							<li><a href="#">公司概况</a></li>
+							<li><a href="#">设计</a></li>
+							<li><a href="#">研发</a></li>
+							<li><a href="#">可持续发展</a></li>
+							<li><a href="#">新闻中心</a></li>
+							<li><a href="#">投资者关系</a></li>
+							<li><a href="#">招贤纳士</a></li>
+							<li><a href="#">塞利普2016年报</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul>
+							<li><a href="#">塞利普俱乐部</a></li>
+							<li><a href="#">登录</a></li>
+							<li><a href="#">注册账户</a></li>
+							<li><a href="#">连接至塞利普</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--footer-->
+		<div class="big-footer">
+			<div class="container">
+			<div class="row rowa text-center hidden-xs hidden-sm">
+				<div class="col-sm-4 a">
+					<p><a href="">连接至菲利普</a></p>
+					<img src="img/weibo.png"/>
+				</div>
+				<div class="col-sm-4 b text-center">
+					<img src="img/footlogo.png"/>
+				</div>
+				<div class="col-sm-4 c">
+					<select name="" >
+						<option value="" checked>选择国家语言 中国-中文</option>
+						<option value="" >韩国-汉语</option>
+						<option value="" >日本-日语</option>
+						<option value="" >英国-英文</option>
+						
+					</select>
+				</div>
+			</div>
+			
+			<div class="row rowa text-center hidden-lg hidden-md">
+				<div class="col-sm-4 b text-center">
+					<img src="img/footlogo.png"/>
+				</div>
+				<div class="col-sm-4 a">
+					<p><a href="">连接至菲利普</a></p>
+					<img src="img/weibo.png"/>
+				</div>
+				<div class="col-sm-4 c">
+					<select name="" >
+						<option value="" checked>选择国家语言 中国-中文</option>
+						<option value="" >韩国-汉语</option>
+						<option value="" >日本-日语</option>
+						<option value="" >英国-英文</option>
+						
+					</select>
+				</div>
+			</div>
+			
+			<div class="row2">
+				<ul class="text-center">
+					<li><a href="#">投资者关系</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">联系塞利普</a></li>
+					<li><a href="#">Shilips</a></li>
+					<li><a href="#">Cookie</a></li>
+					<li><a href="#">政策</a></li>
+					<li><a href="#">产品安全</a></li>
+					<li><a href="#">使用条款</a></li>
+					<li><a href="#">站点地图</a></li>
+					<li><a href="#">手机网站</a></li>
+					<li><a href="#">沪ICP备09062110号</a></li>
+					<li><a href="#">隐私权声明</a></li>
+				</ul>
+				<p class="text-center">@Koninklijke Shilips N.V.2004 - 2017。保留所有权利。</p>
+			</div>
+			</div>
+		</div>
+		
+		<!--fix右侧nav-->
+		<div class="fix">
+			<p>联系我们</p>
+			<ul>
+				<li><a href="#"><img src="img/qq.png"/></a></li>
+				<li class="weixin"><a href="#"><img src="img/weixin.png"/></a><img class="erweima" src="img/erweima.jpg"/></li>
+				<li><a href="#"><img src="img/weibo.png"/></a></li>
+				<li><a href="#"><img src="img/phone.png"/></a></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
